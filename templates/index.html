@@ -1,0 +1,13 @@
+{%extends 'base.html'%}{%block title%}Home{%endblock%} {%block content%}
+<h1>Cupcakes:</h1>
+
+<ul>
+  {%for cupcake in cupcakes%}
+  <li>
+    <img src="{{cupcake.image}}" width="200px" height="250px" />
+    {{cupcake.flavor}} -
+    <button class="delete-cupcake" data-id="{{cupcake.id}}">x</button>
+  </li>
+  {%endfor%}
+</ul>
+{%endblock%}
